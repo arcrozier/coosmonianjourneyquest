@@ -1,0 +1,31 @@
+Change-log:
+Version beta 1.0:			30 April 2018
+	Base game. Included 5 power-ups (health, points, speed, ghost, and freeze)
+	8 obstacles
+	Mouse control of player
+	Click to restart
+	Basic path-finding for enemy (straight line)
+	Maximum 4 health points (start with 3)
+Version beta 1.1: 			(not yet released)
+	Smoother graphics
+	Automatic pause on lost focus (alt-tab ready)
+	All other power-ups are twice as likely as health, except points, which are 3 times as likely
+	Speeds and times tweaked
+	
+	*Bug fixes*
+	Enemy collisions are glitchy in certain situations
+	Player and enemy moving erratically when at their targets
+	When multiple speed effects were applied, only one would wear off
+	Window icon wasn't referenced correctly, resulted in default Java icon being used instead
+	
+	*Technical*
+	Refactored Enemy and Player classes into Entity class
+	
+	
+Roadmap:
+	Menu and levels of difficulty
+	Functional AI for enemy(?)
+	Increasing difficulty over time
+		Faster enemy
+		Fewer power-ups
+		Another enemy
