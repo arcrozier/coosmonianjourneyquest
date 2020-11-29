@@ -10,10 +10,10 @@ import javax.swing.Timer;
 
 public class MouseAnimation implements ActionListener {
 
-	private Player component;
+	private Entity component;
 	private Timer timer;
 
-	public MouseAnimation(Container container, Player component, int delay) {
+	public MouseAnimation(Container container, Entity component, int delay) {
 		this.component = component;
 
 		timer = new Timer(delay, this);

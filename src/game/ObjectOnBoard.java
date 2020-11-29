@@ -114,8 +114,7 @@ public class ObjectOnBoard {
 	 * Returns the coordinates of the object as a point
 	 */
 	public Point getLocation() {
-		Point coords = new Point(this.x, this.y);
-		return coords;
+		return new Point(this.x, this.y);
 	}
 	
 	public int getX() {
@@ -253,7 +252,6 @@ public class ObjectOnBoard {
 	/**
 	 * Default object type.
 	 * 
-	 * @see setObjectType
 	 */
 	public final int OBJECT = 0;
 	/**

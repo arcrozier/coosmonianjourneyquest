@@ -63,7 +63,7 @@ public class Entity {
 			entity = new JLabel(new ColorIcon(Color.BLUE, objectWidth, objectHeight));
 			entity.setSize(entity.getPreferredSize());
 			entity.setLocation((int) x, (int) y);
-			component.add(entity, new Integer(1));
+			component.add(entity, Integer.valueOf(1));
 		} else if (type == ENEMY) {
 			objectWidth = 40;
 			objectHeight = 40;
@@ -84,7 +84,7 @@ public class Entity {
 			entity = new JLabel(new ColorIcon(Color.RED, objectWidth, objectHeight));
 			entity.setSize(entity.getPreferredSize());
 			entity.setLocation((int) x, (int) y);
-			component.add(entity, new Integer(1));
+			component.add(entity, Integer.valueOf(1));
 		}
 
 		// MouseAnimation animation = new MouseAnimation(Game.contentPane,
@@ -101,10 +101,7 @@ public class Entity {
 
 	public boolean invulnerable() {
 		updatePowerUps();
-		if (!invulnerable && !ghost) {
-			return false;
-		}
-		return true;
+		return invulnerable || ghost;
 
 	}
 
@@ -208,8 +205,7 @@ public class Entity {
 	 * Returns the coordinates of the object as a point
 	 */
 	public Point getCoords() {
-		Point coords = new Point((int) this.x, (int) this.y);
-		return coords;
+		return new Point((int) this.x, (int) this.y);
 	}
 
 	/**
